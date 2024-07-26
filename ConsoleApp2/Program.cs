@@ -63,7 +63,6 @@ namespace ConsoleApp2
             list.Add("valUe2");
             list.Add("VAlue3");
 
-            var element = list.Find(x => x.Id == @Id);
         }
 
         public static bool CheckIfExists(string a)
