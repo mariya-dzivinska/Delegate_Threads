@@ -5,11 +5,13 @@ VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp2", "ConsoleApp2\ConsoleApp2.csproj", "{B98E8EB5-2D90-4D18-A045-E5D5141C89B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Threads", "Threads\Threads.csproj", "{5E52EFFD-8045-4F26-976B-540E012DBDBB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Threads", "Threads\Threads.csproj", "{5E52EFFD-8045-4F26-976B-540E012DBDBB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsApp1", "WinFormsApp1\WinFormsApp1.csproj", "{D4DC3A9C-B008-4AA2-A2A1-296E79DD7790}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinFormsApp1", "WinFormsApp1\WinFormsApp1.csproj", "{D4DC3A9C-B008-4AA2-A2A1-296E79DD7790}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Theard2", "Theard2\Theard2.csproj", "{ED416BF0-C7F8-46BF-B9D7-BD7D9AB71CFA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Theard2", "Theard2\Theard2.csproj", "{ED416BF0-C7F8-46BF-B9D7-BD7D9AB71CFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncAwait", "AsyncAwait\AsyncAwait.csproj", "{29D4B61E-7A4E-432B-9577-27584D7E24ED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{ED416BF0-C7F8-46BF-B9D7-BD7D9AB71CFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED416BF0-C7F8-46BF-B9D7-BD7D9AB71CFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED416BF0-C7F8-46BF-B9D7-BD7D9AB71CFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29D4B61E-7A4E-432B-9577-27584D7E24ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29D4B61E-7A4E-432B-9577-27584D7E24ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29D4B61E-7A4E-432B-9577-27584D7E24ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29D4B61E-7A4E-432B-9577-27584D7E24ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
