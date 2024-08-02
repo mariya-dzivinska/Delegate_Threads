@@ -1,21 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AsyncAwait
+﻿namespace AsyncAwait
 {
-    public  class MonitorSample
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading;
+    using System.Threading.Tasks;
+
+    public class MonitorSample
     {
         public void Sample()
         {
-            var t1 = new Thread(x =>
+            var t1 = new System.Threading.Thread(x =>
             {
                 Add(1);
             });
 
-            var t2 = new Thread(x =>
+            var t2 = new System.Threading.Thread(x =>
             {
                 Add(-1);
             });
@@ -39,7 +40,6 @@ namespace AsyncAwait
                     Console.WriteLine("t2: i< 0, i = " + i);
                 }
             }
-
         }
     }
 }

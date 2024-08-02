@@ -10,6 +10,24 @@ namespace Threads
 
         static void Main(string[] args)
         {
+            Singleton singlton1 = null;
+            var t1 = new Thread(() =>
+            {
+                 singlton1 = Singleton.GetInstance();
+            });
+            var t2 = new Thread(() =>
+            {
+                 Singleton singlton2 = Singleton.GetInstance();
+                 if (singlton1 == null)
+                 {
+
+                 }
+                 Console.WriteLine(singlton1 == singlton2);
+            });
+            t1.Start();
+            t2.Start();
+            Console.ReadLine();
+
             OnNotificationRaise += GetDate;
 
             var temp = Console.ReadLine();

@@ -1,16 +1,63 @@
-﻿using System.Diagnostics;
-using System.Runtime.InteropServices.JavaScript;
-using Stopwatch = System.Diagnostics.Stopwatch;
-
-namespace AsyncAwait
+﻿namespace AsyncAwait
 {
+    using System.Diagnostics;
+    using System.Runtime.InteropServices.JavaScript;
+    using System.Threading;
+    using Stopwatch = System.Diagnostics.Stopwatch;
+
     internal class Program
     {
         static readonly object lockObject = new object();
 
-
         static async Task Main(string[] args)
         {
+
+            var a = new MonitorSample();
+
+            string i = "one";
+
+            var t1 = new Thread(() =>
+            {
+                lock (lockObject)
+                {
+                    Add(i);
+                    while(true){}
+                }
+            });
+
+            var t2 = new Thread(() =>
+            {
+                lock (lockObject)
+                {
+                    i = "name";
+                    Add(i);
+                }
+            });
+
+            t1.Start();
+            //Thread.Sleep(1000);
+            t2.Start();
+
+            void Add(string i)
+            {
+                if (i == "one")
+                {
+                    Thread.Sleep(100);
+                    Console.WriteLine("t1: i> 0, i = " + i);
+                    i = "two";
+
+                    Console.WriteLine("t1: , i = " + i);
+                }
+                else
+                {
+                    Console.WriteLine("t2: i<= 0, i = " + i);
+                }
+            }
+
+            Console.ReadLine();
+
+
+
             var helper = new BreakfastHelper();
 
             Stopwatch s = Stopwatch.StartNew();
@@ -62,7 +109,10 @@ namespace AsyncAwait
                 await Task.Delay(500);
             });
 
-          
+            await task1;
+            await task2;
+            await task0;
+
 
             s.Stop();
             Console.WriteLine("time3 parallel: " + s.ElapsedMilliseconds);
@@ -72,7 +122,6 @@ namespace AsyncAwait
             list.Add(task0);
 
             await Task.WhenAll(list);
-            //Task.WaitAll(list, CancellationToken.None);
 
             Console.ReadLine();
         }

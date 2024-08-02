@@ -11,7 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinFormsApp1", "WinFormsApp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Theard2", "Theard2\Theard2.csproj", "{ED416BF0-C7F8-46BF-B9D7-BD7D9AB71CFA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncAwait", "AsyncAwait\AsyncAwait.csproj", "{29D4B61E-7A4E-432B-9577-27584D7E24ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsyncAwait", "AsyncAwait\AsyncAwait.csproj", "{29D4B61E-7A4E-432B-9577-27584D7E24ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tdd", "Tdd\Tdd.csproj", "{ED421031-7273-4E8A-A0B5-E9AAE481B307}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests.Tdd", "UnitTests.Tdd\UnitTests.Tdd.csproj", "{F6B81A22-3CD7-46DE-B481-BFC74462BF52}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,14 @@ Global
 		{29D4B61E-7A4E-432B-9577-27584D7E24ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29D4B61E-7A4E-432B-9577-27584D7E24ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29D4B61E-7A4E-432B-9577-27584D7E24ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED421031-7273-4E8A-A0B5-E9AAE481B307}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED421031-7273-4E8A-A0B5-E9AAE481B307}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED421031-7273-4E8A-A0B5-E9AAE481B307}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED421031-7273-4E8A-A0B5-E9AAE481B307}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6B81A22-3CD7-46DE-B481-BFC74462BF52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6B81A22-3CD7-46DE-B481-BFC74462BF52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6B81A22-3CD7-46DE-B481-BFC74462BF52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6B81A22-3CD7-46DE-B481-BFC74462BF52}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

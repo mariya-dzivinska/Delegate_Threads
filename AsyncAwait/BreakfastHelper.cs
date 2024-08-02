@@ -3,21 +3,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace AsyncAwait
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+    using System.Threading;
+
     public class BreakfastHelper
     {
         public void PoorCoffee()
         {
-            Console.WriteLine("Poor coffee: " + Thread.CurrentThread.ManagedThreadId);
-            Thread.Sleep(500);
+            Console.WriteLine("Poor coffee: " + System.Threading.Thread.CurrentThread.ManagedThreadId);
+            System.Threading.Thread.Sleep(500);
         }
 
         public void HeatPan()
         {
-            Console.WriteLine("Heat pan: " + Thread.CurrentThread.ManagedThreadId);
-            Thread.Sleep(1000);
+            Console.WriteLine("Heat pan: " + System.Threading.Thread.CurrentThread.ManagedThreadId);
+            System.Threading.Thread.Sleep(1000);
         }
 
         public void MakeToast()
